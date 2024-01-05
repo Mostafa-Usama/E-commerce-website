@@ -1,0 +1,196 @@
+:root{
+    --primary: #f16821;
+}
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+}
+
+button,i {
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-size: 15px;
+    font-style: italic;
+    color: rgb(173, 173, 173);
+   
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid var(--primary);
+}
+
+input,
+textarea {
+    caret-color: var(--primary);
+    resize: none;
+}
+section{
+    margin-top: 80px;
+}
+.heading h6{
+    color: rgb(189, 189, 189);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.heading h2{
+    font-weight: 900;
+    font-size: 40px;
+    color: black;
+}
+.heading p{
+    max-width: 300px ;
+    margin: auto;
+    opacity: .7;
+}
+
+.nav-link{
+    transition: .3s;
+    font-weight: bold;
+}
+.nav-link:hover,
+.select{
+   color: var(--primary) !important
+}
+
+.navbar-brand::after,
+.foot-title::after{
+    position: absolute;
+    content: ".";
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: 0px;
+    color: var(--primary);
+}
+
+main{
+    
+    height: 100vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    /* background-position: center; */
+    z-index: 1;
+    /* top: 100px; */
+}
+
+main::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.btn1:hover{
+    background-color: #fff;
+    color: black !important;
+}
+.btn2:hover{
+    background-color: transparent !important;
+    color: white;
+}
+.btn3:hover{
+    color: white !important;
+    background-color: var(--primary) !important;
+}
+.btn4:hover{
+    color: black !important;
+    background-color: white !important;
+}
+
+@media (max-width:767px) {
+    h1{
+        font-size: 35px !important;
+    }
+    main{
+        background-position: center;
+    }
+    .notified{
+        background-position:center;
+    }
+    .tag{
+        bottom: 0 !important;
+        right: 12px !important;
+        
+    }
+    .tag h2{
+        font-size: 30px !important;
+    }
+    .mx{
+       max-width: 300px !important; 
+    }
+}
+
+#products img{
+    transition: .3s;
+
+}
+
+#products .box:hover img{
+    transform: scale(1.1);
+}
+#products .image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--primary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .3s;
+}
+#products .box:hover .image::after{
+    width: 90%;
+    height: 90%;
+    opacity: 1;
+}
+
+
+.notified{
+    position: relative;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+.notified::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: -1;
+}
+
+.icon{
+    transition: .3s;
+}
+.icon:hover{
+    background-color: var(--primary) !important;
+}
+.text {
+    transition: .3s;
+    cursor: pointer;
+}
+
+.text:hover {
+    color: var(--primary);
+}
