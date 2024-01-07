@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar py-2 shadow">
+            <div class="container justify-content-center">
+                <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;" href="index.html">Selling</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container px-5 d-flex justify-content-center align-items-center" style=" height: calc(100vh - 90px);">
+        <form id="regForm" class="row flex-column p-4 rounded shadow " style="max-width: 500px; border: 2px solid rgb(212, 212, 212);">
+            <div class="col-12">
+                <h2 style="font-weight: 800;">Register</h2>
+            </div>
+            <hr>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <label for="firstName">First Name</label>
+                        <input class="px-2 my-2 py-1 w-100 " type="text" name="" id="firstName" required>
+                    </div>
+                    <div class="col-md-6 ">
+                        <label for="lastName">Last Name</label>
+                        <input class="px-2 my-2 py-1 w-100" type="text" name="" id="lastName" required>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="em">Email</label>
+                <input class="px-2 my-2 py-1 w-100" type="email" name="" id="email" required>
+            </div>
+            <div class="col-12">
+                <label for="ps">Password</label>
+                <input class="px-2 my-2 py-1 w-100" type="password" name="" id="password" required>
+            </div>
+            <div class="col-12">
+                <input type="submit" value="Register" class=" w-100 mt-2 py-2 btn fw-bold btn3 text-white" style=" font-size: 20px; transition: .3s; background-color: var(--primary);">
+            </div>
+            <h6 class="pt-3 text-center fw-bold">Already have an account? <a href="login.html">Log in</a></h6>
+        </form>
+    </div>
+    <script src="js/register.js"></script>
+
+</body>
+</html>

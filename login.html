@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700;800;900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <nav class="navbar py-2 shadow">
+                <div class="container justify-content-center">
+                    <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;"
+                        href="index.html">Selling</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container px-5 d-flex justify-content-center align-items-center"
+            style=" height: calc(100vh - 90px);">
+            <form id="logForm" class="row flex-column p-4 rounded shadow "
+                style="width: 500px; border: 2px solid rgb(212, 212, 212);">
+                <div class="col-12">
+                    <h2 style="font-weight: 800;">Login</h2>
+                </div>
+                <hr>
+                <div class="col-12">
+                    <label for="em">Email</label>
+                    <input class="my-2 py-1 w-100 px-2" type="email" name="" id="email" required>
+                </div>
+                <div class="col-12">
+                    <label for="ps">Password</label>
+                    <input class="my-2 py-1 w-100 px-2" type="password" name="" id="password" required>
+                </div>
+                <div class="col-12">
+                    <p style="color: red; margin: 0; text-align: center; font-weight: bold; display: none;" id="err">This account doesn't exist!</p>
+                    <input type="submit" value="Log in" class="w-100 mt-2 py-2 btn fw-bold btn3 text-white"
+                    style="transition: .3s; background-color: var(--primary); font-size: 20px;">
+                </div>
+                <h6 class="pt-3 text-center fw-bold">Dont't have an account? <a href="register.html">Register</a></h6>
+            </form>
+        </div>
+        <script src="js/login.js"></script>
+    </body>
+
+</html>

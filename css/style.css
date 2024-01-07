@@ -43,6 +43,12 @@ textarea {
 section{
     margin-top: 80px;
 }
+
+::selection {
+
+  background: black;
+  color: white;
+}
 .heading h6{
     color: rgb(189, 189, 189);
     font-weight: bold;
@@ -66,6 +72,13 @@ section{
 .nav-link:hover,
 .select{
    color: var(--primary) !important
+}
+.dropdown-item{
+    transition: .3s;
+}
+.dropdown-item:hover{
+    color: var(--primary) !important;
+    background-color: white !important;
 }
 
 .navbar-brand::after,

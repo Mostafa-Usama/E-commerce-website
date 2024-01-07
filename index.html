@@ -14,7 +14,7 @@
     <header>
         <!-- position-fixed z-3 bg-white w-100 -->
         <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-3 bg-white w-100 ">
-            <div class="container">
+            <div class="container ">
                 <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;" href="#">Selling</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,14 +34,32 @@
                         <li class="nav-item px-3">
                             <a class="nav-link active" aria-current="page" href="#special">Special</a>
                         </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link active" aria-current="page" href="#testimonials">Testimonials</a>
-                        </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link active" aria-current="page" href="#blog">Blog</a>
-                        </li>
+            
                         <li class="nav-item px-3">
                             <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item px-3" id="login">
+                            <a class="nav-link active" aria-current="page"  href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item px-3" id="register">
+                            <a class="nav-link active" aria-current="page"  href="register.html">Join us</a>
+                        </li>
+                        <li class="nav-item px-3 dropdown " style="display: none;"   id="user">
+                            <a class="nav-link active  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                      
+                        <ul class="dropdown-menu">
+                            <li class="" >
+                                <a class="dropdown-item fw-bold" id="viewProdcuts" href="index.html">View all products</a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class=" " id="logout" >
+                                <a class="dropdown-item fw-bold" id="logoutLink" href="index.html">Log out</a>
+                            </li>   
+                        </ul>
+                        </li>
+
+                        <li class="nav-item px-3" style="display: none;"   id="cart" >
+                            <i class="nav-link active fas fa-shopping-cart fs-3"  aria-current="page" href="index.html"></i>
                         </li>
                         
                     </ul>    
@@ -51,7 +69,7 @@
     </header>
 
 
-    <main class="position-relative">
+    <main id="home" class="position-relative">
         <div class="container">
             <div class="position-absolute text-white" style="top: 40%;">
                 <h1 style="font-size: 80px; font-weight: 800;">Shop With Us</h1>
@@ -76,7 +94,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/watch1.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Golden Watch">
+                            <img src="images/watch1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Golden Watch">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Golden Watch</h5>
@@ -97,7 +115,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/watch2.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Silver Watch">
+                            <img src="images/watch2.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Silver Watch">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Silver Watch</h5>
@@ -118,7 +136,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/shoes.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Brown Shoes">
+                            <img src="images/shoes.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Brown Shoes">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Brown Shoes</h5>
@@ -139,7 +157,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/hoodie1.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Grey Hoodie">
+                            <img src="images/hoodie1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Grey Hoodie">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Grey Hoodie</h5>
@@ -160,7 +178,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/sunglasses1.jpg" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Black Sunglasses">
+                            <img src="images/sunglasses2.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Black Sunglasses">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Black Sunglasses</h5>
@@ -181,7 +199,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/cap1.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="White Cap">
+                            <img src="images/cap1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="White Cap">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">White Cap</h5>
@@ -202,7 +220,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/football1.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Football Shoes">
+                            <img src="images/football1.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Football Shoes">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Football Shoes</h5>
@@ -223,7 +241,7 @@
                 <div class="col-md-6 col-lg-3 box" >
                     <div class="text-center rounded">
                         <div class="image overflow-hidden position-relative">
-                            <img src="images/shirt1.png" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Blue T-Shirt">
+                            <img src="images/shirt1.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Blue T-Shirt">
                         </div>
                         <div class="px-4 py-4 border">
                             <h5 class="">Blue T-Shirt</h5>
@@ -268,7 +286,6 @@
         </div>
     </section>
 
-
     <section class="bg-secondary bg-opacity-10 m-0 py-5">
         <div class="container-md">
             <div class="heading text-center"  style="margin: 50px 0 80px 0; ">
@@ -280,7 +297,7 @@
             <div class="bg-white p-5 ">
                 <div class="row justify-content-between align-items-center gy-5">
                     <div class="col-lg-6">
-                        <img src="images/model1.jpg" class="h-100 img-fluid bg-secondary bg-opacity-10 rounded" alt="watch">
+                        <img src="images/model1.jpg" loading="lazy" class="h-100 img-fluid bg-secondary bg-opacity-10 rounded" alt="watch">
                     </div>
                     <div class="col-lg-5">
                         <h2 class="fw-bold pb-4">About This Product</h2>
@@ -311,15 +328,13 @@
                             style="color: var(--primary); border-color: var(--primary);">LEARN MORE</button>
                     </div>
                     <div class="col-lg-6 orderfirst order-lg-last">
-                        <img src="images/model4.jpg" class=" img-fluid bg-secondary bg-opacity-10 rounded" alt="watch">
+                        <img src="images/model4.jpg" loading="lazy" class=" img-fluid bg-secondary bg-opacity-10 rounded" alt="watch">
                     </div>
             
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <section id="about">
         <div class="container-md">
@@ -329,7 +344,7 @@
                         <h2 style="font-weight: 800; font-size: 40px;">Trusted Merchant</h2>
                         <p>FOR 28 YEARS</p>
                     </div>
-                    <img src="images/meeting.jpg" class="img-fluid" alt="people">
+                    <img src="images/meeting.jpg" loading="lazy" class="img-fluid" alt="people">
                 </div>
                 <div class="col-lg-3">
                     <div class="heading">
@@ -354,7 +369,7 @@
             <div class="row gy-5">
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_2.jpg" class="img-fluid rounded" alt="team member">
+                        <img src="images/person_2.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
                         <h3 class="pt-4">John Rooster</h3>
                         <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
                         <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
@@ -367,7 +382,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_3.jpg" class="img-fluid rounded" alt="team member">
+                        <img src="images/person_3.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
                         <h3 class="pt-4">John Rooster</h3>
                         <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
                         <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
@@ -380,7 +395,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_4.jpg" class="img-fluid rounded" alt="team member">
+                        <img src="images/person_4.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
                         <h3 class="pt-4">John Rooster</h3>
                         <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
                         <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
@@ -406,25 +421,25 @@
                 <div class="d-flex justify-content-center flex-wrap gap-2 ">
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary);">00</h3>
+                            <h3 style="color: var(--primary); font-weight: bold;" id="days">06</h3>
                             <p>Days</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary);">00</h3>
+                            <h3 style="color: var(--primary); font-weight: bold;" id="hours">23</h3>
                             <p>Hours</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary);">00</h3>
+                            <h3 style="color: var(--primary); font-weight: bold; " id="minutes">1</h3>
                             <p>Minutes</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary);">00</h3>
+                            <h3 style="color: var(--primary); font-weight: bold;" id="seconds">30</h3>
                             <p>Seconds</p>
                         </div> 
                     </div>
@@ -520,14 +535,14 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/person_2.jpg" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
+                        <img src="images/person_2.jpg" loading="lazy" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
                         <h4 class="m-auto  pt-5 opacity-50 mx" style="font-style: italic; max-width: 800px; line-height: 1.8;">&quot;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptatum. Consequatur, ipsum! Ea ipsum numquam corrupti animi! Voluptas,
                              debitis vitae doloribus officiis cupiditate voluptatem delectus porro nam eum 
                              aspernatur&quot;</h4>
                              <h6 class="py-4 fw-bold">John Smith</h6>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/person_3.jpg" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
+                        <img src="images/person_3.jpg" loading="lazy" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
                         <h4 class="m-auto  pt-5 opacity-50 mx" style="font-style: italic; max-width: 800px; line-height: 1.8;">&quot;Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptatum. Consequatur, ipsum! Ea ipsum numquam
                             corrupti animi! Voluptas,
@@ -536,7 +551,7 @@
                             <h6 class="py-4 fw-bold">Mike Ropert</h6>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/person_4.jpg" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
+                        <img src="images/person_4.jpg" loading="lazy" class="img-fluid rounded-circle" style="width: 250px;" alt="...">
                         <h4 class="m-auto  pt-5 opacity-50 mx" style="font-style: italic; max-width: 800px; line-height: 1.8;">&quot;Lorem,
                             ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptatum. Consequatur, ipsum! Ea ipsum numquam
                             corrupti animi! Voluptas,
@@ -557,7 +572,7 @@
             <div class="row">
                 <div class="col-md-5 col-lg-4 flex-grow-1  my-5">
                     <div>
-                        <img src="images/image_1.jpg" class="img-fluid" alt="">
+                        <img src="images/image_1.jpg" loading="lazy" class="img-fluid" alt="">
                         <div class="border p-3 px-4 bg-white">
                             <h4 class="">Attractive Blog Title</h4>
                             <span style="font-size: 14px;" class="opacity-50">Ham Brook</span>
@@ -571,7 +586,7 @@
                 </div>
                 <div class="col-md-5 col-lg-4 flex-grow-1  my-5">
                     <div>
-                        <img src="images/image_3.jpg" class=" img-fluid " alt="">
+                        <img src="images/image_3.jpg" loading="lazy" class=" img-fluid " alt="">
                         <div class="border p-3 px-4 bg-white">
                             <h4 class="">Attractive Blog Title</h4>
                             <span style="font-size: 14px;" class="opacity-50">James Phelp</span>
@@ -585,7 +600,7 @@
                 </div>
                 <div class="col-md-5 col-lg-4 flex-grow-1  my-5">
                     <div>
-                        <img src="images/model2.jpg" class="img-fluid" alt="">
+                        <img src="images/model2.jpg" loading="lazy" class="img-fluid" alt="">
                         <div class="border p-3 px-4 bg-white">
                             <h4 class="">Attractive Blog Title</h4>
                             <span style="font-size: 14px;" class="opacity-50">Ham Brook</span>
@@ -609,7 +624,7 @@
             </div>
             <div class="row my-5">
                 <div class="col-lg-4 px-0">
-                    <img src="images/model1.jpg" class="img-fluid h-100" alt="">
+                    <img src="images/model1.jpg" loading="lazy" class="img-fluid h-100" alt="">
                 </div>
                      <div class="col-lg-8 p-5 bg-secondary bg-opacity-10 ">
                         <div class="row gy-3 align-items-center">
@@ -720,5 +735,7 @@
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/countDown.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
