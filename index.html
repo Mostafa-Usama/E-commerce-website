@@ -16,11 +16,15 @@
         <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-3 bg-white w-100 ">
             <div class="container ">
                 <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;" href="#">Selling</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                <i style="display: none;"   id="cart" class="position-relative nav-link active fas fa-shopping-cart fs-3 order-lg-last" aria-current="page" href="index.html">
+                    
+                </i>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+
+                <div class="collapse navbar-collapse flex-grow-0 " id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-3 ">
                             <a class="nav-link active select " aria-current="page" href="#home">Home</a>
@@ -47,21 +51,16 @@
                         <li class="nav-item px-3 dropdown " style="display: none;"   id="user">
                             <a class="nav-link active  dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
                       
-                        <ul class="dropdown-menu">
-                            <li class="" >
-                                <a class="dropdown-item fw-bold" id="viewProdcuts" href="index.html">View all products</a>
-                            </li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li class=" " id="logout" >
-                                <a class="dropdown-item fw-bold" id="logoutLink" href="index.html">Log out</a>
-                            </li>   
-                        </ul>
+                            <ul class="dropdown-menu">
+                                <li class="" >
+                                    <a class="dropdown-item fw-bold" id="viewProdcuts" href="index.html">View all products</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class=" " id="logout" >
+                                    <a class="dropdown-item fw-bold" id="logoutLink" href="index.html">Log out</a>
+                                </li>   
+                            </ul>
                         </li>
-
-                        <li class="nav-item px-3" style="display: none;"   id="cart" >
-                            <i class="nav-link active fas fa-shopping-cart fs-3"  aria-current="page" href="index.html"></i>
-                        </li>
-                        
                     </ul>    
                 </div>
             </div>
@@ -93,15 +92,15 @@
             <div class="row gy-4 mt-5 justify-content-center">
                 <div class="col-md-3">
                     <label class="fw-bold d-block text-center" for="">Search with product</label>
-                    <input type="text" style="border: 2px solid rgb(44, 44, 44);" class=" w-100 mt-2 px-2 py-1" name="" id="Pname" placeholder="Enter a product name">
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100 mt-2 px-2 py-1" name="" id="Pname" placeholder="Enter a product name">
                 </div>
                 <div class="col-md-3">
                     <label  class="fw-bold d-block text-center" for="">Search with Catagory</label>
-                    <input type="text" style="border: 2px solid rgb(44, 44, 44);" class=" w-100  mt-2 px-2 py-1" name="" id="Pcatagory" placeholder="Enter a product catagory">
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name="" id="Pcatagory" placeholder="Enter a product catagory">
                 </div>
                 <div class="col-md-3">
                     <label class="fw-bold d-block text-center" for="">Search with budget</label>
-                    <input type="number" style="border: 2px solid rgb(44, 44, 44);"  class=" w-100  mt-2 px-2 py-1" name="" id="budget" placeholder="Enter your budget">
+                    <input type="number" style="border: 2px solid rgb(60, 60, 60);"  class=" w-100  mt-2 px-2 py-1" name="" id="budget" placeholder="Enter your budget">
                 </div>
             </div>
             <div class="row mt-3 gy-5 justify-content-center" id="productsContainer">
@@ -751,5 +750,6 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/countDown.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

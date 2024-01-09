@@ -37,9 +37,9 @@ let prodcuts = [
     },
     {
         id: 4,
-        name: "Black Sunglasses",
+        name: "Brown Sunglasses",
         image: "images/sunglasses2.png",
-        price: "$700.00", 
+        price: "$70.00", 
         catagory: "Accessories"
 
     },
@@ -65,6 +65,38 @@ let prodcuts = [
         image: "images/shirt1.png",
         price: "$60.00", 
         catagory: "Fashion"
+
+    },
+    {
+        id: 8,
+        name: "Grey Pants",
+        image: "images/pants2.png",
+        price: "$50.00",
+        catagory: "Fashion"
+
+    },
+    {
+        id: 9,
+        name: "Headphones",
+        image: "images/headphones1.png",
+        price: "$120.00",
+        catagory: "Accessories"
+
+    },
+    {
+        id: 10,
+        name: "Argentina Shirt",
+        image: "images/Argentina.png",
+        price: "$110.00",
+        catagory: "Sport"
+
+    },
+    {
+        id: 11,
+        name: "Addidas Shorts",
+        image: "images/shorts2.png",
+        price: "$75.00",
+        catagory: "Sport"
 
     },
 
@@ -99,17 +131,17 @@ function renderProducts() {
             <div class="image overflow-hidden position-relative">
                 <img src="${productsToDraw[i].image}" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Golden Watch">
             </div>
-            <div class="px-4 py-4 border">
-                <h5 class="">${productsToDraw[i].name}</h5>
-                <p class="opacity-75 mb-1 fw-bold">${productsToDraw[i].price}</p>
-                <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
+            <div class="px-4 py-4 border border-top-0">
+                <h5 class="fw-bold">${productsToDraw[i].name}</h5>
+                <p class="opacity-75 mb-1 " style="font-weight:600;">Price: ${productsToDraw[i].price}</p>
+                <i class="fas fa-star py-2" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <p class="opacity-75">Catagory: ${productsToDraw[i].catagory}</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
+                    <button  class="cartBtn btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
                     <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
                 </div>
             </div>
@@ -117,5 +149,14 @@ function renderProducts() {
     </div>
         `
     }
+    if (productsToDraw.length == 0) {
+        let h2 = document.createElement("h2")
+        h2.textContent = "No prodcuts were found!"
+        h2.style.textAlign = "center"
+        productsContainer.appendChild(h2)
+    }
 }
-window.onload = renderProducts
+renderProducts()
+window.onload = function () {
+
+}
