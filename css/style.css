@@ -43,7 +43,20 @@ textarea {
 section{
     margin-top: 80px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:invalid{
+    border: 2px solid red;
+    box-shadow: 0 0 5px red;
+}
 
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 ::selection {
 
   background: black;
@@ -64,7 +77,21 @@ section{
     margin: auto;
     opacity: .7;
 }
-
+#items-con{
+    border: 2px solid rgb(50, 50, 50);
+    cursor: default;
+    transform: translate(-100%, 25px);
+    left: 100%;
+    font-family: 'Mulish';
+    display: none;
+        
+}
+@media (max-width:991px) {
+    #items-con{
+        left: 50%;
+        transform: translate(-55%,24px);
+    }
+}
 .nav-link{
     transition: .3s;
     font-weight: bold;

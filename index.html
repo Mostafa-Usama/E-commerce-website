@@ -16,15 +16,21 @@
         <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-3 bg-white w-100 ">
             <div class="container ">
                 <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;" href="#">Selling</a>
-                <i style="display: none;"   id="cart" class="position-relative nav-link active fas fa-shopping-cart fs-3 order-lg-last" aria-current="page" href="index.html">
-                    
-                </i>
+                <button style="display: none"  id="cart" class="me-lg-5  position-relative text-center fas fa-shopping-cart fs-3 order-lg-last border-0 bg-transparent" aria-current="page" href="index.html" >
+                    <div id="items-con" class="  px-3 flex-column position-absolute bg-white px-2 py-3 rounded" style="min-width: 300px;" >
+                        
+                        
+                        
+                        
+
+                    </div>
+                </button>
                 <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse flex-grow-0 " id="navbarSupportedContent">
+                <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item px-3 ">
                             <a class="nav-link active select " aria-current="page" href="#home">Home</a>
@@ -104,174 +110,7 @@
                 </div>
             </div>
             <div class="row mt-3 gy-5 justify-content-center" id="productsContainer">
-                <!-- <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/watch1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Golden Watch">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Golden Watch</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$200.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Accessories</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/watch2.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Silver Watch">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Silver Watch</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$100.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Accessories</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/shoes.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Brown Shoes">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Brown Shoes</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$80.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Fashion</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/hoodie1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Grey Hoodie">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Grey Hoodie</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$100.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Fashion</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/sunglasses2.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Black Sunglasses">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Black Sunglasses</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$70.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Accessories</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/cap1.png" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="White Cap">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">White Cap</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$30.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Sport</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/football1.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Football Shoes">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Football Shoes</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$100.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Sport</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 box" >
-                    <div class="text-center rounded">
-                        <div class="image overflow-hidden position-relative">
-                            <img src="images/shirt1.png" loading="lazy" class="img-fluid w-100 bg-secondary bg-opacity-10 rounded-top" alt="Blue T-Shirt">
-                        </div>
-                        <div class="px-4 py-4 border">
-                            <h5 class="">Blue T-Shirt</h5>
-                            <p class="opacity-75 mb-1 fw-bold">$60.00</p>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
-                            <p class="opacity-75">Catagory: Fashion</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button class="btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                                <i class="fas fa-heart fa-2x text-secondary" style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+
                 
             </div>
         </div>
