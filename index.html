@@ -15,11 +15,11 @@
         <!-- position-fixed z-3 bg-white w-100 -->
         <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-3 bg-white w-100 ">
             <div class="container ">
-                <a class="navbar-brand fs-1 position-relative" style="font-weight: 800;" href="#">Selling</a>
-                <button style="display: none"  id="cart" class="me-lg-5  position-relative text-center fas fa-shopping-cart fs-3 order-lg-last border-0 bg-transparent" aria-current="page" href="index.html" >
+                <a class="navbar-brand position-relative fs-1 " style="font-weight: 800;" href="#">Selling</a>
+                <button style="display: none"  id="cart" class="me-lg-5   position-relative text-center fas fa-shopping-cart fs-3 order-lg-last border-0 bg-transparent" aria-current="page" href="index.html" >
+                    <p id="productsNum" onclick="showItems('e')" class="position-absolute text-white end-0 fs-6 rounded-circle"  style="padding: 2px 5px; top: 20px;  background-color: var(--primary);">0</p>
                     <div id="items-con" class="  px-3 flex-column position-absolute bg-white px-2 py-3 rounded" style="min-width: 300px;" >
-                        
-                        
+                        <!-- onblur='hideCart()' -->
                         
                         
 
@@ -59,7 +59,7 @@
                       
                             <ul class="dropdown-menu">
                                 <li class="" >
-                                    <a class="dropdown-item fw-bold" id="viewProdcuts" href="index.html">View all products</a>
+                                    <a onclick="storeData()" class="dropdown-item fw-bold" id="viewProdcuts" href="cartItems.html">View all products</a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class=" " id="logout" >
@@ -97,16 +97,16 @@
             </div>
             <div class="row gy-4 mt-5 justify-content-center">
                 <div class="col-md-3">
-                    <label class="fw-bold d-block text-center" for="">Search with product</label>
-                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100 mt-2 px-2 py-1" name="" id="Pname" placeholder="Enter a product name">
+                    <label class="fw-bold d-block text-center" for="">Search with Name</label>
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100 mt-2 px-2 py-1" name="" id="Pname" placeholder="Product name">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <label  class="fw-bold d-block text-center" for="">Search with Catagory</label>
-                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name="" id="Pcatagory" placeholder="Enter a product catagory">
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name="" id="Pcatagory" placeholder="Product catagory">
                 </div>
                 <div class="col-md-3">
-                    <label class="fw-bold d-block text-center" for="">Search with budget</label>
-                    <input type="number" style="border: 2px solid rgb(60, 60, 60);"  class=" w-100  mt-2 px-2 py-1" name="" id="budget" placeholder="Enter your budget">
+                    <label class="fw-bold d-block text-center" for="">Search with Budget</label>
+                    <input type="number" style="border: 2px solid rgb(60, 60, 60);"  class=" w-100  mt-2 px-2 py-1" name="" id="budget" placeholder="Your budget">
                 </div>
             </div>
             <div class="row mt-3 gy-5 justify-content-center" id="productsContainer">
@@ -158,8 +158,7 @@
                         <p class="pb-3 text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
                         <h3 class="fw-bold">Price:</h3>
                         <p class="text-secondary fw-bold"><del class="opacity-50 px-2">$300.00</del> $200.00</p>
-                    <button class="btn btn3 fw-bold rounded-0 border-2 px-4 mt-2"
-                        style="color: var(--primary); border-color: var(--primary);">LEARN MORE</button>
+                    <button class="btn btn4 fw-bold rounded-0 border-2 px-4 mt-2 border-black">LEARN MORE</button>
                     </div>
 
                 </div>
@@ -176,8 +175,7 @@
                             assumenda sed optio, error at?</p>
                             <h3 class="fw-bold">Price:</h3>
                             <p class="text-secondary fw-bold"><del class="opacity-50 px-2">$200.00</del> $100.00</p>
-                        <button class="btn btn3 fw-bold rounded-0 border-2 px-4 mt-2"
-                            style="color: var(--primary); border-color: var(--primary);">LEARN MORE</button>
+                        <button class="btn btn4 fw-bold rounded-0 border-2 px-4 mt-2 border-black">LEARN MORE</button>
                     </div>
                     <div class="col-lg-6 orderfirst order-lg-last">
                         <img src="images/model4.jpg" loading="lazy" class=" img-fluid w-100  bg-secondary bg-opacity-10 rounded" alt="watch">
@@ -192,7 +190,7 @@
         <div class="container-md">
             <div class="row align-items-center justify-content-between gy-5">
                 <div class="col-lg-8 position-relative">
-                    <div class="position-absolute px-4 py-3 text-white tag bg-black" style=" bottom: -10px; right: -10px; background-color: var(--primary);">
+                    <div class="position-absolute px-4 py-3 text-white tag " style="background-color: var(--primary); bottom: -10px; right: -10px; background-color: var(--primary);">
                         <h2 style="font-weight: 800; font-size: 40px;">Trusted Merchant</h2>
                         <p>FOR 28 YEARS</p>
                     </div>
@@ -204,8 +202,7 @@
                         <h2>About Us</h2>
                         <p class="pb-4 m-auto mx m-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur.
                         Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
-                        <button class="btn btn3 fw-bold rounded-0 border-2 px-4 mt-2"
-                            style="color: var(--primary); border-color: var(--primary);">LEARN MORE</button>
+                        <button class="btn btn4 fw-bold rounded-0 border-2 px-4 mt-2 border-black">LEARN MORE</button>
                     </div>
                 </div>
             </div>
@@ -273,25 +270,25 @@
                 <div class="d-flex justify-content-center flex-wrap gap-2 ">
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary); font-weight: bold;" id="days">06</h3>
+                            <h3 style=" font-weight: bold;" id="days">06</h3>
                             <p>Days</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary); font-weight: bold;" id="hours">23</h3>
+                            <h3 style=" font-weight: bold;" id="hours">23</h3>
                             <p>Hours</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary); font-weight: bold; " id="minutes">1</h3>
+                            <h3 style=" font-weight: bold; " id="minutes">1</h3>
                             <p>Minutes</p>
                         </div> 
                     </div>
                     <div style="width: 80px;font-size: 14px; ">
                         <div class="p-3 bg-white text-black rounded"> 
-                            <h3 style="color: var(--primary); font-weight: bold;" id="seconds">30</h3>
+                            <h3 style=" font-weight: bold;" id="seconds">30</h3>
                             <p>Seconds</p>
                         </div> 
                     </div>
@@ -432,7 +429,7 @@
                             <span class="" style="color: var(--primary);">News</span>
                             <p class="py-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis
                             reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <button class="fw-bold btn btn3 border-2 rounded-0" style="color: var(--primary); border-color: var(--primary);" >Read More</button>
+                            <button class="fw-bold btn btn4 border-2 rounded-0 border-black">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -446,7 +443,7 @@
                             <span class="" style="color: var(--primary);">News</span>
                             <p class="py-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis
                             reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <button class="fw-bold btn btn3 border-2 rounded-0" style="color: var(--primary); border-color: var(--primary);" >Read More</button>
+                            <button class="fw-bold btn btn4 border-2 rounded-0 border-black" >Read More</button>
                         </div>
                     </div>
                 </div>
@@ -460,7 +457,7 @@
                             <span class="" style="color: var(--primary);">News</span>
                             <p class="py-3 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis
                             reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-                            <button class="fw-bold btn btn3 border-2 rounded-0" style="color: var(--primary); border-color: var(--primary);" >Read More</button>
+                            <button class="fw-bold btn btn4 border-2 rounded-0 border-black">Read More</button>
                         </div>
                     </div>
                 </div>
@@ -511,7 +508,7 @@
                                 </div>
                             </div>   
                         </div>
-                        <button class="btn btn3 fw-bold rounded-0 border-2 px-4 my-3 d-block m-auto" style="color: var(--primary); border-color: var(--primary);">Send Message</button>  
+                        <button class="btn btn4 border-black fw-bold rounded-0 border-2 px-4 my-3 d-block m-auto">Send Message</button>  
                 </div>
             </div>
         </div>

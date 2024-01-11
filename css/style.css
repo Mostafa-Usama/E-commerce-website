@@ -55,6 +55,7 @@ input:invalid{
 
 /* Firefox */
 input[type=number] {
+    appearance:  textfield;
     -moz-appearance: textfield;
 }
 ::selection {
@@ -150,11 +151,10 @@ main::after{
     color: white !important;
     background-color: var(--primary) !important;
 }
-.btn4:hover{
-    color: black !important;
-    background-color: white !important;
+.btn4:hover {
+    color: white !important;
+    background-color: black !important;
 }
-
 @media (max-width:767px) {
     h1{
         font-size: 35px !important;
@@ -175,6 +175,10 @@ main::after{
     }
     .mx{
        max-width: 400px !important; 
+    }
+    .favBtn{
+        top: 0 !important;
+        right: 0 !important;
     }
 }
 
@@ -233,4 +237,12 @@ main::after{
 
 .text:hover {
     color: var(--primary);
+}
+.favBtn{
+    transition: .3s;
+    cursor: pointer;
+    top: -20px;
+    right: -20px;
+    background-color: rgb(230, 230, 230);
+    color: rgb(187, 187, 187);
 }

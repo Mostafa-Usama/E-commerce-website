@@ -1,7 +1,9 @@
+
 const Pname = document.getElementById("Pname")
 const catagory = document.getElementById("Pcatagory")
 const budget = document.getElementById("budget")
 const productsContainer = document.getElementById("productsContainer")
+let storedData = JSON.parse(localStorage.getItem("data"))
 let products = [
     {
         id: 0,
@@ -45,7 +47,7 @@ let products = [
     },
     {
         id: 4,
-        name: "Brown Sunglasses",
+        name: "Sunglasses",
         image: "images/sunglasses2.png",
         price: "$70.00", 
         catagory: "Accessories",
@@ -146,17 +148,18 @@ function filterInput() {
 function renderProducts() {
     
     productsContainer.textContent = ""
-    for (let i = 0; i < products.length; i++){
-        if (productsToDraw.indexOf(products[i]) != -1)
-        productsContainer.innerHTML += `
+    for (let i = 0; i < products.length; i++) {
+        if (productsToDraw.indexOf(products[i]) != -1) {
+           
+            productsContainer.innerHTML += `
         <div class="col-md-6 col-lg-3 box"  >
         <div class="text-center rounded" >
             <div class="image overflow-hidden position-relative">
                 <img src="${products[i].image}" loading="lazy" class="img-fluid  bg-secondary bg-opacity-10 rounded-top" alt="Golden Watch">
             </div>
-            <div class="px-4 py-4 border border-top-0">
+            <div class="px-4 py-4 border border-top-0 position-relative">
                 <h5 class="fw-bold">${products[i].name}</h5>
-                <p class="opacity-75 mb-1 " style="font-weight:600;">Price: ${products[i].price}</p>
+                <p class="opacity-75 mb-1 " style="">Price: ${products[i].price}</p>
                 <i class="fas fa-star py-2" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
@@ -165,15 +168,23 @@ function renderProducts() {
                 <p class="opacity-75">Catagory: ${products[i].catagory}</p>
                 <span class='opacity-75 fw-bold'>Quantity: </span>
                 <input type="number" id='amount${products[i].id}'  onblur="reset(event)" min="1" max="99" value="1"  class='fw-bold mb-3 text-center' style='width:40px; '>
-                <div class="d-flex justify-content-between align-items-center">
-                    <button onclick="addToCart(event, ${products[i].id})"  class="cartBtn btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Add to cart</button>
-                    <i onclick='favourite(event, ${products[i].id})' class=" fas fa-heart fa-2x " style="transition:.3s; cursor: pointer;"></i>
+                <i onclick='favourite(${products[i].id})' class="favBtn position-absolute rounded-circle p-2  fav${products[i].id} fas fa-heart fa-2x "></i>
+                <div class="d-flex flex-column  ">
+                <button onclick="addToCart(${products[i].id})"class="mb-3 border-2 border-black bg-white cartBtn${products[i].id} btn py-2 rounded-0 fw-bold btn4 text-black" style="transition: .3s; ; border: 2px solid var(--primary); ">Add to cart</button>
                 </div>
             </div>
         </div>
     </div>
         `
+            drawFav(i)
+            if (products[i].amount != 0) {
+                let btn = document.querySelector(`.cartBtn${i}`)
+                btn.setAttribute("onclick", `removeFromCart(${i})`)
+                btn.textContent = "Remove From Cart"
+            }
+        }
     }
+    
     productsContainer.innerHTML += `
                 <div class="toast-container position-fixed bottom-0 end-0 p-3 text-white ">
                     <div id="liveToast" class="toast bg-success " role="alert" aria-live="assertive" aria-atomic="true">
@@ -210,7 +221,24 @@ function renderProducts() {
         productsContainer.appendChild(h2)
     }
 }
-renderProducts()
-window.onload = function () {
 
+function getStoredData() {
+    products.forEach((ele, index) => {
+        let i = storedData.findIndex((x) => x.id == ele.id)
+        if ( i != -1) {
+            products[index].amount = storedData[i].amount
+        }    
+    })
+}
+getStoredData()
+renderProducts()
+
+function drawFav(id) {
+    let fav = document.querySelector(`.fav${id}`)
+    if (products[id].fav) {
+        fav.style.color = "red"
+    }
+    else {
+        fav.style.color = ""
+    }
 }

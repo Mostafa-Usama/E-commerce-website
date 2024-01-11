@@ -66,8 +66,22 @@ textarea {
     top: 0px;
     color: var(--primary);
 }
+.btn1:hover {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.btn2:hover {
+    background-color: transparent !important;
+    color: white;
+}
 
 .btn3:hover {
     color: white !important;
-    background-color: #ff5602 !important;
+    background-color: var(--primary) !important;
+}
+
+.btn4:hover {
+    color: white !important;
+    background-color: black !important;
 }

@@ -9,6 +9,8 @@ let btns
 let itemCon = document.getElementById("items-con")
 let opened = false
 let fav = false
+let num = document.getElementById("productsNum")
+let data = []
 
 logoutLink.addEventListener('click', ()=> localStorage.setItem("signed", "false"))
 cart.addEventListener("click", showItems)
@@ -19,6 +21,12 @@ function showItems(e) {
     opened = !opened
 
 }
+// function hideCart(event) {
+//     itemCon.style.display = "none"
+//     opened = false
+// }
+let itemsInCart = []
+
 window.onload = function () {
     if (isSigned) {
         login.style.display = "none"
@@ -29,12 +37,25 @@ window.onload = function () {
         user.firstElementChild.textContent = `${localStorage.getItem("firstName")} ${localStorage.getItem("lastName")}`
 
     }
-    btns = document.getElementsByClassName("cartBtn")
+    // btns = document.getElementsByClassName("cartBtn")
+    storedData.forEach((ele) => {
+        itemsInCart.push({
+            name: ele.name,
+            amount: ele.amount,
+            id: ele.id
+        })
+    })
     draw()
 }
-let itemsInCart = []
 
-function addToCart(event, id) {
+function storeData() {
+    data = JSON.stringify(products.filter((ele) => ele.amount != 0))
+    localStorage.setItem("data", data)
+}
+
+
+
+function addToCart(id) {
     if (!isSigned) {
         location.assign("login.html")
     }
@@ -58,16 +79,20 @@ function addToCart(event, id) {
                     id: products[i].id
                 })
             }
+        
             let toastElList = document.querySelector('.toast')
             let body = document.querySelector('.toast-body')
+            let con = document.querySelectorAll('.toast-container')
+            con[1].style.visibility = "hidden"
+            con[0].style.visibility = "visible"
             let toast = new bootstrap.Toast(toastElList)
             body.textContent = `You added ${products[i].name} to your Cart!`
             toast.show()
-
-            let btn = event["target"] 
+            
+            let btn = document.querySelector(`.cartBtn${i}`)
             btn.onclick = null
-            btn.onclick = ()=> {
-                removeFromCart(event, id)
+            btn.onclick = () => {
+                removeFromCart(i)
             }
             btn.textContent = "Remove From Cart"
        
@@ -77,21 +102,24 @@ function addToCart(event, id) {
 
 }
 
-function removeFromCart(event, id) {
-    let btn = event["target"]
+function removeFromCart(id) {
+   
+    let btn = document.querySelector(`.cartBtn${id}`)
     let i = id
-    console.log(i)
     products[i].amount = 0
     let index = itemsInCart.findIndex((ele) => ele.id === id)
     itemsInCart.splice(index, 1)
     btn.onclick = null
     btn.onclick = function x() {
-        addToCart(event, i)
+        addToCart(i)
     }
     btn.textContent = "Add To Cart"
 
     let toastElList = document.querySelectorAll('.toast')
     let body = document.querySelectorAll('.toast-body')
+    let con = document.querySelectorAll('.toast-container')
+    con[0].style.visibility = "hidden"
+    con[1].style.visibility = "visible"
     let toast = new bootstrap.Toast(toastElList[1])
     body[1].textContent = `You Removed ${products[i].name} from your Cart!`
     toast.show()
@@ -101,6 +129,7 @@ function removeFromCart(event, id) {
 
 function draw() {
     itemCon.innerHTML = ""
+    num.textContent = products.reduce((total, ele) => total + ele.amount, 0)
     if (itemsInCart.length == 0) {
         let p = document.createElement("p")
         p.textContent = "Cart Empty"
@@ -122,27 +151,28 @@ function draw() {
          
             `
         }
-        itemCon.innerHTML += ` <button onclick="clearCart(event)"  class=" btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Clear Cart</button>`
+        itemCon.innerHTML += ` <button onclick="clearCart()"  class=" btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Clear Cart</button>`
     }
 }
 
 function add(event, id) {
     products[id].amount += 1
+    num.textContent = (+num.textContent) +1 
     let index = itemsInCart.findIndex((ele) => ele.id === id)
     itemsInCart[index].amount = products[id].amount
     event["target"].previousElementSibling.textContent = products[id].amount 
 }
-function remove(event, id) {
+function remove(event, id) { 
     products[id].amount -= 1
+    num.textContent = (+num.textContent) - 1 
     let index = itemsInCart.findIndex((ele) => ele.id === id)
     itemsInCart[index].amount = products[id].amount
     if (products[id].amount == 0) {
         itemsInCart.splice(index, 1)
-        let btn = event["target"]
-        console.log(btn, event)
-        btn.removeEventListener("click", removeFromCart)
+        let btn = document.querySelector(`.cartBtn${id}`)
+        btn.onclick = null
         btn.onclick = function () {
-            addToCart(event, id)
+            addToCart(id)
         }
         btn.textContent = "Add To Cart"
 
@@ -154,16 +184,19 @@ function remove(event, id) {
     }
 }
 
-function clearCart(event) {
+function clearCart() { 
     products.forEach((ele) => ele.amount = 0)
     itemsInCart.splice(0)
-    Array.from(btns).forEach((btn, i) => {
-        btn.removeEventListener("click", removeFromCart)
-        btn.onclick = function () {
-            addToCart(event, i)
+    for (let i = 0; i < products.length; i++){
+        let btn = document.querySelector(`.cartBtn${i}`)
+        if (btn) {
+            btn.onclick = null
+            btn.onclick = function () {
+                addToCart(i)
+            }
+            btn.textContent = "Add To Cart"
         }
-        btn.textContent = "Add To Cart"
-    })
+    }
 
     draw()
 }
@@ -171,11 +204,21 @@ function reset(event) {
     if (!event["target"].value) {
         event["target"].value = 1
     }
-    console.log(event["target"].value)
 }
 
 
-function favourite(event, id) {
-    products[id].fav ? event["target"].style.color = "" : event["target"].style.color = "red"
-    products[id].fav = !products[id].fav
+function favourite(id) {
+    if (!isSigned) {
+        location.assign("login.html")
+    }
+    else {
+        let fav = document.querySelector(`.fav${id}`)
+        if (products[id].fav) {
+            fav.style.color = ""
+        }
+        else {
+            fav.style.color = "red"
+        }
+        products[id].fav = !products[id].fav
+    }
 }

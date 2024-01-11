@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/register.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +17,7 @@
         </nav>
     </header>
 
-    <div class="container px-5 d-flex justify-content-center align-items-center" style=" height: calc(100vh - 90px);">
+    <div class="container px-5 d-flex justify-content-center align-items-center my-5">
         <form id="regForm" class="row flex-column p-4 rounded shadow " style="max-width: 500px; border: 2px solid rgb(212, 212, 212);">
             <div class="col-12">
                 <h2 style="font-weight: 800;">Register</h2>
@@ -44,6 +43,10 @@
                 <label for="ps">Password</label>
                 <input class="px-2 my-2 py-1 w-100" type="password" name="" id="password" required>
             </div>
+            <div class="col-12 mt-3">
+                <label for="im">Profile Image</label>
+                <input onchange="loadImage('event')" class="px-2 my-2 py-1 w-100" type="file" name="im" id="profileImage" required accept=".jpg,.png,.jpeg">
+            </div>
             <div class="col-12">
                 <input type="submit" value="Register" class=" w-100 mt-2 py-2 btn fw-bold btn3 text-white" style=" font-size: 20px; transition: .3s; background-color: var(--primary);">
             </div>
@@ -51,6 +54,6 @@
         </form>
     </div>
     <script src="js/register.js"></script>
-<i class="bi bi-airplane-engines"></i>
+    <i class="bi bi-airplane-engines"></i>
 </body>
 </html>
