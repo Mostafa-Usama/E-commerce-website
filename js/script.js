@@ -159,7 +159,7 @@ function draw() {
          
             `
         }
-        itemCon.innerHTML += ` <button onclick="clearCart()"  class=" btn rounded-0 fw-bold btn3 bg-white" style="transition: .3s; color: var(--primary); border: 2px solid var(--primary); ">Clear Cart</button>`
+        itemCon.innerHTML += ` <button onclick="clearCart()" class="border-2 border-black  btn rounded-0 fw-bold btn4 bg-white" style="transition: .3s; ">Clear Cart</button>`
     }
 }
 

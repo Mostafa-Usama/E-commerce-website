@@ -169,7 +169,7 @@ function renderProducts() {
                 <i class="fas fa-star" style="color: rgb(255, 192, 34);"></i>
                 <p class="opacity-75">Catagory: ${products[i].catagory}</p>
                 <span class='opacity-75 fw-bold'>Quantity: </span>
-                <input type="number" id='amount${products[i].id}'  onblur="reset(event)" min="1" max="99" value="1"  class='fw-bold mb-3 text-center' style='width:40px; '>
+                <input type="number" id='amount${products[i].id}'  onblur="reset(event)" min="1" max="99" value="1"  class='fw-bold mb-3 text-center ' style='width:40px; '>
                 <i onclick='favourite(${products[i].id})' class="favBtn position-absolute rounded-circle p-2  fav${products[i].id} fas fa-heart fa-2x "></i>
                 <div class="d-flex flex-column  ">
                 <button onclick="addToCart(${products[i].id})"class="mb-3 border-2 border-black bg-white cartBtn${products[i].id} btn py-2 rounded-0 fw-bold btn4 text-black" style="transition: .3s; ; border: 2px solid var(--primary); ">Add to cart</button>

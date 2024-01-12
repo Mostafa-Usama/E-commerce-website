@@ -28,7 +28,7 @@ function renderProducts() {
 
         productsContainer.innerHTML += `
         
-        <div class="row align-items-center text-center text-md-start"  >
+        <div class="row align-items-center gy-4 text-center text-md-start"  >
                     <div class="col-md-5 box">
                         <img src="${products[i].image}" loading="lazy" class=" w-100 img-fluid  bg-secondary bg-opacity-10 rounded-top"
                             alt="Golden Watch">

@@ -48,16 +48,16 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+input[type=number] {
+    appearance:  textfield;
+    -moz-appearance: textfield;
+}
 input:invalid{
     border: 2px solid red;
     box-shadow: 0 0 5px red;
 }
 
 /* Firefox */
-input[type=number] {
-    appearance:  textfield;
-    -moz-appearance: textfield;
-}
 ::selection {
 
   background: black;
