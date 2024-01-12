@@ -10,7 +10,8 @@ let itemCon = document.getElementById("items-con")
 let opened = false
 let fav = false
 let num = document.getElementById("productsNum")
-let data = []
+
+
 
 logoutLink.addEventListener('click', ()=> localStorage.setItem("signed", "false"))
 cart.addEventListener("click", showItems)
@@ -38,19 +39,26 @@ window.onload = function () {
 
     }
     // btns = document.getElementsByClassName("cartBtn")
-    storedData.forEach((ele) => {
-        itemsInCart.push({
-            name: ele.name,
-            amount: ele.amount,
-            id: ele.id
+    if (localStorage.getItem("signed") === "true") {
+        storedData.forEach((ele) => {
+            itemsInCart.push({
+                name: ele.name,
+                amount: ele.amount,
+                id: ele.id
+            })
         })
-    })
+    }
     draw()
 }
+window.onbeforeunload = storeData
 
 function storeData() {
+    let data = []
     data = JSON.stringify(products.filter((ele) => ele.amount != 0))
+
+    favourites = JSON.stringify(products.filter((ele) => ele.fav))
     localStorage.setItem("data", data)
+    localStorage.setItem("favs", favourites)
 }
 
 

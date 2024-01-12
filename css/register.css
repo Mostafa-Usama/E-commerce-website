@@ -57,7 +57,8 @@ textarea {
     color: var(--primary) !important
 }
 
-.navbar-brand::after{
+.navbar-brand::after,
+.foot-title::after{
     position: absolute;
     content: ".";
     width: 20px;
@@ -84,4 +85,12 @@ textarea {
 .btn4:hover {
     color: white !important;
     background-color: black !important;
+}
+.favBtn {
+    transition: .3s;
+    cursor: pointer;
+    top: 0px;
+    right: 0px;
+    background-color: rgb(230, 230, 230);
+    color: red
 }

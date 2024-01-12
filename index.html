@@ -59,7 +59,11 @@
                       
                             <ul class="dropdown-menu">
                                 <li class="" >
-                                    <a onclick="storeData()" class="dropdown-item fw-bold" id="viewProdcuts" href="cartItems.html">View all products</a>
+                                    <a class="dropdown-item fw-bold" href="profile.html">Profile</a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="" >
+                                    <a class="dropdown-item fw-bold" href="cartItems.html">View Cart</a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class=" " id="logout" >
@@ -87,35 +91,32 @@
     </main>
   
 
-    <section id="products">
-        <div class="container">
-            <div class="heading text-center">
-                <h6>POPULAR PRODUCTS</h6>
-                <h2>Our Products</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel
-                ut eveniet aut consequatur laboriosam ipsam.</p>
+   
+<section id="about">
+    <div class="container-md">
+        <div class="row align-items-center justify-content-between gy-5">
+            <div class="col-lg-8 position-relative">
+                <div class="position-absolute px-4 py-3 text-white tag "
+                    style="background-color: var(--primary); bottom: -10px; right: -10px; background-color: var(--primary);">
+                    <h2 style="font-weight: 800; font-size: 40px;">Trusted Merchant</h2>
+                    <p>FOR 28 YEARS</p>
+                </div>
+                <img src="images/meeting.jpg" loading="lazy" class="img-fluid" alt="people">
             </div>
-            <div class="row gy-4 mt-5 justify-content-center">
-                <div class="col-md-3">
-                    <label class="fw-bold d-block text-center" for="">Search with Name</label>
-                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100 mt-2 px-2 py-1" name="" id="Pname" placeholder="Product name">
+            <div class="col-lg-3">
+                <div class="heading text-center text-lg-start">
+                    <h6>MERCHANT COMPANY</h6>
+                    <h2>About Us</h2>
+                    <p class="pb-4 m-auto mx m-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga
+                        ipsa, repellat blanditiis nihil, consectetur.
+                        Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius
+                        vero vel!</p>
+                    <button class="btn btn4 fw-bold rounded-0 border-2 px-4 mt-2 border-black">LEARN MORE</button>
                 </div>
-                <div class="col-md-4">
-                    <label  class="fw-bold d-block text-center" for="">Search with Catagory</label>
-                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name="" id="Pcatagory" placeholder="Product catagory">
-                </div>
-                <div class="col-md-3">
-                    <label class="fw-bold d-block text-center" for="">Search with Budget</label>
-                    <input type="number" style="border: 2px solid rgb(60, 60, 60);"  class=" w-100  mt-2 px-2 py-1" name="" id="budget" placeholder="Your budget">
-                </div>
-            </div>
-            <div class="row mt-3 gy-5 justify-content-center" id="productsContainer">
-
-                
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
 
     <section class=" notified">
         <div class="container-fluid">
@@ -140,7 +141,7 @@
 
     <section class="bg-secondary bg-opacity-10 m-0 py-5">
         <div class="container-md">
-            <div class="heading text-center"  style="margin: 50px 0 80px 0; ">
+            <div class="heading text-center"  style="margin: 30px 0 50px 0; ">
                 <h6>AWESOME PRODUCTS</h6>
                 <h2>Featured Products</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel
@@ -186,25 +187,35 @@
         </div>
     </section>
 
-    <section id="about">
-        <div class="container-md">
-            <div class="row align-items-center justify-content-between gy-5">
-                <div class="col-lg-8 position-relative">
-                    <div class="position-absolute px-4 py-3 text-white tag " style="background-color: var(--primary); bottom: -10px; right: -10px; background-color: var(--primary);">
-                        <h2 style="font-weight: 800; font-size: 40px;">Trusted Merchant</h2>
-                        <p>FOR 28 YEARS</p>
-                    </div>
-                    <img src="images/meeting.jpg" loading="lazy" class="img-fluid" alt="people">
+    <section id="products">
+        <div class="container">
+            <div class="heading text-center">
+                <h6>POPULAR PRODUCTS</h6>
+                <h2>Our Products</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam
+                    accusantium vel
+                    ut eveniet aut consequatur laboriosam ipsam.</p>
+            </div>
+            <div class="row gy-4 mt-5 justify-content-center">
+                <div class="col-md-3">
+                    <label class="fw-bold d-block text-center" for="">Search with Name</label>
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100 mt-2 px-2 py-1" name=""
+                        id="Pname" placeholder="Product name">
                 </div>
-                <div class="col-lg-3">
-                    <div class="heading text-center text-lg-start">
-                        <h6>MERCHANT COMPANY</h6>
-                        <h2>About Us</h2>
-                        <p class="pb-4 m-auto mx m-lg-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga ipsa, repellat blanditiis nihil, consectetur.
-                        Consequuntur eum inventore, rem maxime, nisi excepturi ipsam libero ratione adipisci alias eius vero vel!</p>
-                        <button class="btn btn4 fw-bold rounded-0 border-2 px-4 mt-2 border-black">LEARN MORE</button>
-                    </div>
+                <div class="col-md-4">
+                    <label class="fw-bold d-block text-center" for="">Search with Catagory</label>
+                    <input type="text" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name=""
+                        id="Pcatagory" placeholder="Product catagory">
                 </div>
+                <div class="col-md-3">
+                    <label class="fw-bold d-block text-center" for="">Search with Budget</label>
+                    <input type="number" style="border: 2px solid rgb(60, 60, 60);" class=" w-100  mt-2 px-2 py-1" name=""
+                        id="budget" placeholder="Your budget">
+                </div>
+            </div>
+            <div class="row mt-3 gy-5 justify-content-center" id="productsContainer">
+    
+    
             </div>
         </div>
     </section>
@@ -218,41 +229,47 @@
             <div class="row gy-5">
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_2.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
-                        <h3 class="pt-4">John Rooster</h3>
-                        <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
-                        <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
-                        cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                        <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
-                        <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        <img src="images/person_2.jpg" loading="lazy" class="img-fluid " alt="team member">
+                        <div class=" bg-white p-4 border rounded-0">
+                            <h3 class="">John Rooster</h3>
+                            <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
+                            <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
+                            cupiditate tempore suscipit inventore deserunt tenetur.</p>
+                            <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
+                            <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_3.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
-                        <h3 class="pt-4">John Rooster</h3>
-                        <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
-                        <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
-                        cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                        <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
-                        <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        <img src="images/person_3.jpg" loading="lazy" class="img-fluid" alt="team member">
+                        <div class="bg-white border p-4" >
+                            <h3 class="">Mark Ethan</h3>
+                            <p class="opacity-50">MARKETING, HR </p>
+                            <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
+                            cupiditate tempore suscipit inventore deserunt tenetur.</p>
+                            <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
+                            <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center">
-                        <img src="images/person_4.jpg" loading="lazy" class="img-fluid rounded" alt="team member">
-                        <h3 class="pt-4">John Rooster</h3>
-                        <p class="opacity-50">CO-FOUNDER, PRESIDENT</p>
-                        <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
-                        cupiditate tempore suscipit inventore deserunt tenetur.</p>
-                        <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
-                        <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
-                        <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        <img src="images/person_4.jpg" loading="lazy" class="img-fluid " alt="team member">
+                        <div class="bg-white border  p-4">     
+                            <h3 class="">Harry Paul</h3>
+                            <p class="opacity-50">DESIGNER, ARTIST</p>
+                            <p class="text-secondary mx m-auto pb-3">Nisi at consequatur unde molestiae quidem provident voluptatum deleniti quo iste error eos est praesentium distinctio
+                            cupiditate tempore suscipit inventore deserunt tenetur.</p>
+                            <i class="fab fa-facebook-f  rounded-circle bg-secondary icon py-2 mx-1 text-white" style="padding: 0 11px;"></i>
+                            <i class="fab fa-twitter px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-linkedin-in px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                            <i class="fab fa-instagram px-2 rounded-circle bg-secondary icon py-2 mx-1 text-white"></i>
+                        </div>
                     </div>
                 </div>
             </div>

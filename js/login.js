@@ -13,6 +13,7 @@ function checkData(event) {
     if (storedEmail === email.value && storedPassword === password.value) {
         localStorage.setItem("signed", "true")
         location.assign("index.html")
+        localStorage.setItem("data", JSON.stringify([]))
     }
     else {
         err.style.display = "block"

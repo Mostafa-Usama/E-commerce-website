@@ -5,9 +5,19 @@ const password = document.getElementById("password")
 const form = document.getElementById("regForm")
 let profileImage
 
-form.addEventListener('submit',saveData )
+form.addEventListener('submit', saveData)
+
 function loadImage(event) {
-    profileImage = URL.createObjectURL(event.target.files[0])
+    // console.log(event.target.files)
+    
+    // profileImage = URL.createObjectURL(event.target.files[0])
+    // console.log(profileImage)
+    // let ima = document.getElementById("img")
+    // ima.src = profileImage
+    // console.log(img)
+
+    // localStorage.setItem("image", ((event.target.files[0])))
+    // console.log(JSON.stringify(profileImage))
 }
 
 function saveData(event) {

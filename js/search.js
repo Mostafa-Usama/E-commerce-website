@@ -128,6 +128,8 @@ let products = [
 
 ]
 let productsToDraw = [...products]
+let favourites = JSON.parse(localStorage.getItem("favs"))
+
 Pname.addEventListener("keyup", filterInput)
 catagory.addEventListener("keyup", filterInput)
 budget.addEventListener("keyup", filterInput)
@@ -182,6 +184,10 @@ function renderProducts() {
                 btn.setAttribute("onclick", `removeFromCart(${i})`)
                 btn.textContent = "Remove From Cart"
             }
+            if (products[i].fav) {
+                let heart = document.querySelector(`.fav${i}`)
+                heart.style.color = "red"
+            }
         }
     }
     
@@ -223,12 +229,19 @@ function renderProducts() {
 }
 
 function getStoredData() {
-    products.forEach((ele, index) => {
-        let i = storedData.findIndex((x) => x.id == ele.id)
-        if ( i != -1) {
-            products[index].amount = storedData[i].amount
-        }    
-    })
+    if (localStorage.getItem("signed") === "true") {
+        products.forEach((ele, index) => {
+            let i = storedData.findIndex((x) => x.id == ele.id)
+            if (i != -1) {
+                products[index].amount = storedData[i].amount
+            }
+        })
+        favourites.forEach((ele) => {
+            let i = ele.id
+            products[i].fav = true
+        })
+    }
+
 }
 getStoredData()
 renderProducts()
