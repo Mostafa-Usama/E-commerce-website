@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="overflow: hidden;">
 
+    <div class="loader-container ">
+        <div class="loader"></div>
+    </div>
     <header>
         <!-- position-fixed z-3 bg-white w-100 -->
-        <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-3 bg-white w-100 ">
+        <nav class="navbar navbar-expand-lg py-2 shadow position-fixed z-2 bg-white w-100 ">
             <div class="container ">
                 <a class="navbar-brand position-relative fs-1 " style="font-weight: 800;" href="#">Selling</a>
                 <button style="display: none"  id="cart" class="me-lg-5   position-relative text-center fas fa-shopping-cart fs-3 order-lg-last border-0 bg-transparent" aria-current="page" href="index.html" >
@@ -609,9 +612,9 @@
     </footer>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/countDown.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/countDown.js" defer></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

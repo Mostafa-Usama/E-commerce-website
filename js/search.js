@@ -3,7 +3,10 @@ const Pname = document.getElementById("Pname")
 const catagory = document.getElementById("Pcatagory")
 const budget = document.getElementById("budget")
 const productsContainer = document.getElementById("productsContainer")
-let storedData = JSON.parse(localStorage.getItem("data"))
+let storedData = []
+if (JSON.parse(localStorage.getItem("data"))) {
+    storedData = JSON.parse(localStorage.getItem("data"))
+}
 let products = [
     {
         id: 0,

@@ -29,6 +29,13 @@ function showItems(e) {
 let itemsInCart = []
 
 window.onload = function () {
+    let spinner = document.querySelector(".loader-container")
+    spinner.style.display = "none"
+    let main = document.querySelector("main")
+    main.style.opacity = 1
+    let body = document.querySelector("body")
+    body.style.overflow = "visible"
+    // main.style.transform = "none"
     if (isSigned) {
         login.style.display = "none"
         reg.style.display = "none"
